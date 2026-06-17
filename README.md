@@ -17,7 +17,7 @@ npx expo start
 ```
 
 ## Requisitos: 
-Por enquanto, só tem a página principal (Novidades) e o Login feitos, sem interatividade. Como esses são os principais requisitos do trabalho, os deixei pronto primeiro. Com o tempo talvez eu expanda até clonar o aplicativo inteiro
+Por enquanto, só tem a página principal (Novidades) e o Login feitos, sem interatividade. Como esses são os principais requisitos do trabalho, os deixei pronto primeiro. Com o tempo talvez eu expanda até clonar o aplicativo inteiro. 
 
 
 ## Trabalho (Por Felipe Ferreira Menegueli, de 15 de Junho as 22h até 17 de Junho as 18h):
