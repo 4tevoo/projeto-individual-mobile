@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, useWindowDimensions, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { theme } from '../../theme';
 import { novidadesData, comunidadeData } from '../../data/contentData';
 import { Card } from '../../components/Card';
+import { ScreenLayout } from '../../components/ScreenLayout';
 
 export default function Novidades() {
   const [subTab, setSubTab] = useState(0);
@@ -25,7 +25,7 @@ export default function Novidades() {
 
   return (
     <SafeAreaView style={{ flex: 1 }} edges={[]}>
-      <LinearGradient colors={theme.colors.backgroundGradient} style={styles.container}>
+      <ScreenLayout style={{ padding: 0 }}>
         <View style={styles.subHeader}>
           <TouchableOpacity style={styles.tabButton} onPress={() => handlePress(0)}>
             <Text style={subTab === 0 ? styles.activeText : styles.inactiveText}>Novidades</Text>
@@ -39,7 +39,6 @@ export default function Novidades() {
             <View style={[styles.activeIndicator, { width: subTab === 0 ? 67 : 80 }]} />
           </Animated.View>
         </View>
-
         <FlatList
           data={subTab === 0 ? novidadesData : comunidadeData}
           keyExtractor={(item) => item.id}
@@ -48,13 +47,16 @@ export default function Novidades() {
           )}
           contentContainerStyle={styles.content}
         />
-      </LinearGradient>
+      </ScreenLayout>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
+  container: { 
+    flex: 1 
+  },
+  
   subHeader: {
     flexDirection: 'row',
     backgroundColor: theme.colors.surface,
@@ -63,20 +65,36 @@ const styles = StyleSheet.create({
     borderColor: theme.colors.borderSelected,
     paddingTop: 40
   },
-  tabButton: { flex: 1, justifyContent: 'center', alignItems: 'center' },
+
+  tabButton: {
+    flex: 1,
+    justifyContent: 'center', 
+    alignItems: 'center' 
+  },
+
   indicatorContainer: {
     position: 'absolute',
     bottom: 0,
     width: '50%',
     alignItems: 'center',
   },
+
   activeIndicator: {
     height: 3,
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     backgroundColor: theme.colors.accent
   },
-  activeText: { color: theme.colors.accent },
-  inactiveText: { color: theme.colors.textSecondary },
-  content: { padding: 15 }
+
+  activeText: { 
+    color: theme.colors.accent 
+  },
+
+  inactiveText: { 
+    color: theme.colors.textSecondary 
+  },
+
+  content: { 
+    padding: 15 
+  }
 });

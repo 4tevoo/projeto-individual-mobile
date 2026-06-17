@@ -1,11 +1,11 @@
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Linking, Image } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 import { theme } from '../../theme';
 import { SocialButton } from '../../components/SocialButton';
+import { ScreenLayout } from '../../components/ScreenLayout';
 
 export default function Login() {
     return (
-        <LinearGradient colors={theme.colors.backgroundGradient} style={styles.container}>
+        <ScreenLayout style={styles.contentCenter}>
             <TouchableOpacity style={styles.settingsIconContainer}>
                 <Image
                     source={require('../../assets/login/configuracoes-login.png')}
@@ -82,24 +82,109 @@ export default function Login() {
                 artigo="a"
                 onPress={() => Linking.openURL('https://www.playstation.com')}
             />
-        </LinearGradient>
+        </ScreenLayout>
     );
 }
 
 const styles = StyleSheet.create({
-    settingsIconContainer: { position: 'absolute', top: 50, right: 20, zIndex: 1, },
-    settingsIcon: { width: 42, height: 42, tintColor: theme.colors.accent, },
-    cardContainer: { backgroundColor: theme.colors.surface, borderRadius: 8, padding: 16, marginBottom: 24, },
-    row: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around' },
-    container: { flex: 1, padding: 24, justifyContent: 'center' },
-    title: { fontSize: 32, fontWeight: 'bold', marginBottom: 40, paddingTop: 80},
-    inputContainer: { marginBottom: 24 },
-    label: { fontSize: 14, fontWeight: 'bold', color: 'white', width: 60, textAlign: 'right' },
-    input: { flex: 1, textAlign: 'left', marginLeft: 50, fontSize: 14, color: 'white' },
-    hr: { height: 1, backgroundColor: '#757067', marginVertical: 12 },
-    loginButton: { backgroundColor: theme.colors.accent, padding: 16, alignItems: 'center', borderRadius: 4, marginBottom: 24 },
-    loginButtonText: { color: '#18131D', fontWeight: 'bold', fontSize: 16 },
-    dividerContainer: { flexDirection: 'row', alignItems: 'center', marginBottom: 24 },
-    line: { flex: 1, height: 1, backgroundColor: '#757067' },
-    dividerText: { marginHorizontal: 10, fontSize: 14 }
+    contentCenter: { 
+        justifyContent: 'center', 
+        flex: 1, margin: 10 
+    },
+
+    settingsIconContainer: { 
+        position: 'absolute', 
+        top: 50, 
+        right: 20, 
+        zIndex: 1, 
+    },
+
+    settingsIcon: { 
+        width: 42, 
+        height: 42, 
+        tintColor: theme.colors.accent, 
+    },
+
+    cardContainer: { 
+        backgroundColor: theme.colors.surface, 
+        borderRadius: 8, 
+        padding: 16, 
+        marginBottom: 24, 
+    },
+
+    row: { 
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        justifyContent: 'space-around' 
+    },
+
+    container: { 
+        flex: 1, 
+        padding: 24, 
+        justifyContent: 'center'
+     },
+
+    title: { 
+        fontSize: 32, 
+        fontWeight: 'bold', 
+        marginBottom: 40, 
+        paddingTop: 80
+    },
+
+    inputContainer: { 
+        marginBottom: 24 
+    },
+
+    label: { 
+        fontSize: 14, 
+        fontWeight: 'bold', 
+        color: 'white', 
+        width: 60, 
+        textAlign: 'right' 
+    },
+
+    input: { 
+        flex: 1, 
+        textAlign: 'left', 
+        marginLeft: 50, 
+        fontSize: 14, 
+        color: 'white' 
+    },
+
+    hr: { 
+        height: 1, 
+        backgroundColor: '#757067', 
+        marginVertical: 12 
+    },
+
+    loginButton: { 
+        backgroundColor: theme.colors.accent, 
+        padding: 16, 
+        alignItems: 'center', 
+        borderRadius: 4, 
+        marginBottom: 24 
+    },
+
+    loginButtonText: { 
+        color: '#18131D', 
+        fontWeight: 'bold', 
+        fontSize: 16 
+    },
+
+    dividerContainer: { 
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        marginBottom: 24
+     },
+
+    line: { 
+        flex: 1, 
+        height: 1, 
+        backgroundColor: '#757067' 
+    },
+
+    dividerText: {
+         marginHorizontal: 10, 
+         fontSize: 14 
+    }
 });

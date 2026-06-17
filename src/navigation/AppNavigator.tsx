@@ -12,11 +12,6 @@ import Social from '../screens/Social/Social';
 
 const Tab = createBottomTabNavigator();
 
-const DummyScreen = ({ route }: any) => (
-  <View style={{ flex: 1, backgroundColor: theme.colors.backgroundGradient[0] }} />
-);
-
-
 export default function AppNavigator() {
   const animations = {
     Atividades: useRef(new Animated.Value(0)).current,

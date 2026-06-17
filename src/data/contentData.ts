@@ -1,4 +1,4 @@
-import { ContentItem } from "../types/content";
+import { ContentItem, MenuItem } from "../types/content";
 
 export const novidadesData: ContentItem[] = [
   { 
@@ -47,3 +47,25 @@ export const comunidadeData: ContentItem[] = [
     url: 'https://forums.warframe.com/topic/1492034-diretrizes-da-comunidade-uso-dos-canais-de-bate-papo/'
   }
 ];
+
+export const atividadesData: MenuItem[] = [
+  { id: '1', title: 'Alertas', image: require('../assets/atividades/alertas-icon.png') },
+  { id: '2', title: 'Baro Ki\'Teer', image: require('../assets/atividades/baro-icon.png') },
+  { id: '3', title: 'Nightwave', image: require('../assets/atividades/nightwave-icon.png') },
+  { id: '4', title: 'Invasões', image: require('../assets/atividades/invasoes-icon.png') },
+  { id: '5', title: 'Extratores', image: require('../assets/atividades/extrator-icon.png') },
+  { id: '6', title: 'Incursões', image: require('../assets/atividades/incursao-icon.png') },
+  { id: '7', title: 'Fendas do Void', image: require('../assets/atividades/fenda-icon.png') },
+  { id: '8', title: 'Ciclos Globais', image: require('../assets/atividades/ciclos-icon.png') },
+  { id: '9', title: 'Sindicatos', image: require('../assets/atividades/sindicatos-icon.png') },
+];
+
+export const equipamentosData: MenuItem[] = [
+  { id: '1', title: 'Códex', image: require('../assets/equipamentos/codex-icon.png') },
+  { id: '2', title: 'Inventário', image: require('../assets/equipamentos/inventario-icon.png') },
+  { id: '3', title: 'Mods', image: require('../assets/equipamentos/mod-icon.png') },
+  { id: '4', title: 'Arsenal', image: require('../assets/equipamentos/arsenal-icon.png') },
+  { id: '5', title: 'Forja', image: require('../assets/equipamentos/forja-icon.png') },
+  { id: '6', title: 'Companheiros', image: require('../assets/equipamentos/companheiros-icon.png') },
+  { id: '7', title: 'Relíquias do Void', image: require('../assets/equipamentos/reliquias-icon.png') },
+]
