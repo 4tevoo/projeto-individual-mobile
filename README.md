@@ -15,11 +15,6 @@ Depois para rodar:
 ```bash
 npx expo start
 ```
-
-## Requisitos: 
-Por enquanto, só tem a página principal (Novidades) e o Login feitos, sem interatividade. Como esses são os principais requisitos do trabalho, os deixei pronto primeiro. Com o tempo talvez eu expanda até clonar o aplicativo inteiro. 
-
-
 ## Trabalho (Por Felipe Ferreira Menegueli, de 15 de Junho as 22h até 17 de Junho as 18h):
 Crie um aplicativo React Native que copie duas telas de um aplicativo qualquer que exista na loja de aplicativo, menos Netflix como exemplo na aula.
 
@@ -59,6 +54,3 @@ Gerenciamento de estado e navegação
 **Gerenciamento de Estado:** Utilização de useState para controle de abas e useSharedValue para animações fluidas na interface.
 
 **UX Nativa:** Implementação de Linking para navegação externa e TouchableOpacity com feedback de clique, replicando a fluidez do aplicativo original.
-
-#### Desafio:
-Não consegui estilizar corretamente, de forma fiel ao aplicativo, o bendito StatusBar. Precisaria de mais tempo, se eu conseguir, edito o ReadMe futuramente, mesmo após o prazo do trabalho.
