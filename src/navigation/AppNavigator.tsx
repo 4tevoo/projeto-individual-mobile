@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, Image, Animated, Easing } from 'react-native';
+import { Image, Animated, Easing } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { theme } from '../theme';
 import Novidades from '../screens/Home/Novidades';
